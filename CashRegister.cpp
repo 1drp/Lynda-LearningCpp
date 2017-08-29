@@ -13,11 +13,11 @@ using namespace std;
 
 float entries(float taxRate)
 {
-	float total, entry, tax = 0;
+	float total = 0, entry = 0, tax = 0;
 
 	cout << "Enter the first item's price (0 to cancel): ";
 	cin >> entry;
-	total += entry;
+	total = entry;
 
 	while(entry != 0)
 	{
@@ -38,7 +38,7 @@ float entries(float taxRate)
 
 void change(float total, float payment)
 {
-	int change, dollars, quarters, dimes, nickels, pennies = 0;
+	int change = 0, dollars = 0, quarters = 0, dimes = 0, nickels = 0, pennies = 0;
 
 	change = (payment - total)*100;
 	dollars = change / 100;
@@ -56,7 +56,7 @@ void change(float total, float payment)
 int main()
 {
 	char another = 'y';
-	float taxRate, total, payment  = 0;
+	float taxRate = 0, total = 0, payment = 0;
 
 	cout << "Welcome to the cash register." << endl
 			<< "Please enter the local tax rate: ";
